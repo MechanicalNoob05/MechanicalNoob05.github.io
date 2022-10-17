@@ -1,3 +1,11 @@
+const Splash = document.getElementById('splash_screen')
+
+document.addEventListener('DOMContentLoaded',(e)=>{
+  setTimeout(()=>{
+    splash_screen.classList.add('display-none')
+  },2000);
+})
+
 //this is the div in which the editing is done and required things are added
 const content = document.getElementById('content')
 
