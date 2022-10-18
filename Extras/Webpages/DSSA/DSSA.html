@@ -16,14 +16,22 @@
     <div class="splash_screen" id="splash_screen">
       <h1 class="fade-In">Welcome to S.C.O.E.</h1>
     </div>
-    <div class="main-container">
 
     <!------------------------Navigation bar--------------------------------------------------------->
     <nav class="navbar-container">
       <div class="navbar">
         <span class="navbar-span"><img class="logo-image" src="Media/Logo.jpg" alt="" width="80" height="80" style="margin-right:10px;"><b>Data Science Student's Association</b></span>
+        <ul class="navbar-options">
+          <li class="navbar-option-list-item"><button onclick="contentSet('Home')">Home</button></li>
+          <li class="navbar-option-list-item"><button onclick="contentSet('Future-Events')">Upcoming Events</button></li>
+          <li class="navbar-option-list-item"><button onclick="contentSet('Past-Events')">Past Events</button></li>
+          <li class="navbar-option-list-item"><button onclick="contentSet('Records')">Records</button></li>
+          <li class="navbar-option-list-item"><button onclick="contentSet('Notes')">Notes</button></li>
+          <li class="navbar-option-list-item"><button onclick="contentSet('About-us')">About us</button></li>
+        </ul>
       </div>
     </nav>
+    <div class="main-container">
 <!-----------------------------------------JumboTron------------------------------------------------------>
       <div class="jumbotron-container">
         <h1 class="jumbotron-header">Custom jumbotron</h1>
@@ -32,39 +40,8 @@
 <!----------------------This is where the main content of the page will be loaded-------------------------->
       <div class="page-container">
         <!--Nav for past current and future events-->
-
-        <div class="left-side">
-          <div class="image-container">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                  <img src="Media/Logo.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="Media/Logo.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="Media/Logo.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-            </div>
-          </div>
-          <ol class="list" id="navigationList">
-            <li class="list-items"> <button type="button" onclick="contentSet('Ongoing-Events')">Current Events</button> </li>
-            <li class="list-items"> <button type="button" onclick="contentSet('Future-Events')">Future events</button> </li>
-            <li class="list-items"> <button type="button" onclick="contentSet('Past-Events')">Past Events</button> </li>
-            <li class="list-items"> <button type="button" onclick="contentSet('Records')">Acomplishments</button> </li>
-            <li class="list-items"> <button type="button" onclick="contentSet('Notes')">Notes</button> </li>
-            <li class="list-items"> <button type="button" onclick="contentSet('About-us')">About us</button> </li>
-            <li class="list-items"> <button type="button" onclick="contentSet('Members')">Members</button> </li>
-          </ol>
-        </div>
-        <!--The events and its description will be here-->
-        <div class="right-side">
-          <h1 id="selectionTitle">test</h1>
-          <div class="content" id="content">
-          </div>
-        </div>
+        <h1 id="selectionTitle"></h1> 
+        <div id="content"></div>
       </div>
 
       <!--End of the page-->

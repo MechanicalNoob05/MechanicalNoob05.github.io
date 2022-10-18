@@ -15,14 +15,12 @@ function initial(){
 }
 
 function contentSet(page){
-  if(page == 'Ongoing-Events'){
-    //calling the function for requested content
-    onGoing()
-    //setting the title for the content
-    document.getElementById('selectionTitle').innerText = "What's Going on....."
-  }else if(page=='Future-Events'){
+  if(page=='Future-Events'){
     futureEvent()
     document.getElementById('selectionTitle').innerText = "Some plans for future....."
+  }else if(page == 'Home'){
+    home()
+    document.getElementById('selectionTitle').innerText = "Welcome...."
   }else if(page == 'Past-Events'){
     pastEvent()
     document.getElementById('selectionTitle').innerText = "Memories...."
@@ -35,13 +33,10 @@ function contentSet(page){
   }else if(page == 'About-us'){
     about()
     document.getElementById('selectionTitle').innerText = "Know us...."
-  }else if(page == 'Members'){
-    members()
-    document.getElementById('selectionTitle').innerText = "History...."
   }
 }
 //This function is creating and adding elements in div
-function onGoing(){
+function home(){
   //The while loop is for removing existing elements in the div sort of like clearing the board
   while (content.firstChild) {
     content.removeChild(content.lastChild);

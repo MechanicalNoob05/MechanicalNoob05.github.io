@@ -49,7 +49,6 @@
 }
 /*body background*/
 body{
-    background-image: url(Media/Logo.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
     display: flex;
@@ -60,15 +59,15 @@ body{
 /* the container for whole thing */
 .main-container{
     padding: 20px;
-    margin: 2rem;
-    width: 95%;
+    margin: 1rem;
+    width: 99%;
     border-radius: 5px;
     background: rgba(225,225,225,0.9);
 }
 /*Jumbotron introduction etc*/
 .jumbotron-container{
     background: whitesmoke;
-    height: 12rem;
+    height: fit-content;
     padding:1rem;
     margin-top: 10px;
     margin-bottom: 10px;
@@ -87,43 +86,28 @@ body{
     display: flex;
     border: 1px solid black;
     border-radius: 8px;
-    flex-direction: row;
+    flex-direction: column;
     padding: 5px;
-}
-.left-side{
-    padding: 5px;
-    margin-right: 5px;
-    border: 1px solid black;
-    border-radius: 8px;
-    width: 30%;
-}
-.right-side{
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-left: 5px;
-    border-radius: 8px;
-    width: 70%;
-    height: 100%;
-}
-.content{
-    height: 100%;
-    overflow:scroll;
-    overflow-x:hidden;
-    overflow-y:scroll;
-}
-.right-side p{
-    padding: 2px;
-    border-radius: 8px;
-    height: 100%;
 }
 
-.image-container{
-    position: relative;
-    margin: auto;
-    padding: 10px;
-    width: 300px;
-    height: 300px;
+.navbar-options{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: auto;
 }
+.navbar-option-list-item{
+    margin: 10px;
+    list-style: none;
+}
+
+.navbar-option-list-item button{
+    width: auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    background: whitesmoke;
+}
+
 .list{
     list-style: none;
     padding: 10px;
@@ -203,4 +187,41 @@ textarea{
     flex-direction: column;
     border: 1px solid black;
     border-radius: 8px;
+}
+
+@media screen and (max-width:1190px){
+    .jumbotron-container{
+        height: fit-content;
+    }
+    .navbar-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar-options{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        display: none;
+    }
+    .navbar-span{
+        font-size: 15px;
+    }
+    .logo-image{
+        height: 50px;
+        height: 50px;
+        border: none;
+    }
+    .footer-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .footer-left{
+        width: auto;
+    }
+    .footer-right{
+        width: auto;
+    }
 }
